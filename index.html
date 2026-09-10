@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LPテンプレート デモギャラリー | ievono</title>
+<style>
+  :root{
+    --bg:#0f1115; --card:#171a21; --text:#eef0f3; --muted:#9aa3af;
+    --accent:#7dd3fc; --border:#262b35;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f6f7f9; --card:#ffffff; --text:#14161a; --muted:#5b6472; --border:#e5e8ee; }
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  }
+  header{ padding:56px 24px 32px; text-align:center; }
+  header h1{ font-size:clamp(24px,4vw,36px); margin:0 0 8px; }
+  header p{ color:var(--muted); margin:0; font-size:15px; }
+  .badges{ margin-top:16px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap; }
+  .badge{ font-size:12px; padding:4px 10px; border-radius:999px; border:1px solid var(--border); color:var(--muted); }
+  main{ max-width:1080px; margin:0 auto; padding:0 24px 64px; }
+  .section-title{ font-size:14px; letter-spacing:.08em; color:var(--muted); margin:40px 0 16px; text-transform:uppercase; }
+  .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:20px; }
+  .card{
+    background:var(--card); border:1px solid var(--border); border-radius:14px;
+    overflow:hidden; text-decoration:none; color:inherit; display:block;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover{ transform:translateY(-3px); box-shadow:0 10px 24px rgba(0,0,0,.18); }
+  .thumb{ width:100%; aspect-ratio:16/10; object-fit:cover; display:block; background:#000; }
+  .card-body{ padding:14px 16px 18px; }
+  .card-body h3{ margin:0 0 4px; font-size:16px; }
+  .card-body span{ font-size:13px; color:var(--muted); }
+  footer{ text-align:center; padding:32px; color:var(--muted); font-size:13px; }
+  a.shoplink{ color:var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>LPテンプレート デモギャラリー</h1>
+  <p>クリックすると各テンプレートの実際の動作をブラウザで確認できます</p>
+  <div class="badges">
+    <span class="badge">BOOTH: <a class="shoplink" href="https://ievono.booth.pm/" target="_blank" rel="noopener">ievono.booth.pm</a></span>
+    <span class="badge">Gumroad: <a class="shoplink" href="https://ideogangster.gumroad.com/" target="_blank" rel="noopener">ideogangster.gumroad.com</a></span>
+  </div>
+</header>
+
+<main>
+  <div class="section-title">日本語版（BOOTH）</div>
+  <div class="grid">
+    <a class="card" href="templates/saas.html">
+      <img class="thumb" src="assets/thumbs/saas.png" alt="Nexo">
+      <div class="card-body"><h3>Nexo</h3><span>SaaS / ツール紹介LP</span></div>
+    </a>
+    <a class="card" href="templates/coaching.html">
+      <img class="thumb" src="assets/thumbs/coaching.png" alt="Sora Coaching">
+      <div class="card-body"><h3>Sora Coaching</h3><span>コーチング / コンサルLP</span></div>
+    </a>
+    <a class="card" href="templates/restaurant.html">
+      <img class="thumb" src="assets/thumbs/restaurant.png" alt="器 UTSUWA">
+      <div class="card-body"><h3>器 UTSUWA</h3><span>飲食店 / 店舗LP</span></div>
+    </a>
+    <a class="card" href="templates/event.html">
+      <img class="thumb" src="assets/thumbs/event.png" alt="FUTURE STAGE">
+      <div class="card-body"><h3>FUTURE STAGE</h3><span>イベント / セミナー告知LP</span></div>
+    </a>
+    <a class="card" href="templates/personal-brand.html">
+      <img class="thumb" src="assets/thumbs/personal-brand.png" alt="Rina Kato Portfolio">
+      <div class="card-body"><h3>Rina Kato Portfolio</h3><span>個人ブランディング / フリーランスLP</span></div>
+    </a>
+  </div>
+
+  <div class="section-title">English Edition (Gumroad)</div>
+  <div class="grid">
+    <a class="card" href="templates/ryokan.html">
+      <img class="thumb" src="assets/thumbs/ryokan.png" alt="Kōyō Ryokan">
+      <div class="card-body"><h3>Kōyō Ryokan</h3><span>Ryokan / Hotel LP</span></div>
+    </a>
+    <a class="card" href="templates/japan-tour.html">
+      <img class="thumb" src="assets/thumbs/japan-tour.png" alt="Torii Travel">
+      <div class="card-body"><h3>Torii Travel</h3><span>Japan Tour LP</span></div>
+    </a>
+    <a class="card" href="templates/zen-retreat.html">
+      <img class="thumb" src="assets/thumbs/zen-retreat.png" alt="Ma Retreat">
+      <div class="card-body"><h3>Ma Retreat</h3><span>Zen / Mindfulness Retreat LP</span></div>
+    </a>
+    <a class="card" href="templates/yoga-studio.html">
+      <img class="thumb" src="assets/thumbs/yoga-studio.png" alt="Sakura Yoga">
+      <div class="card-body"><h3>Sakura Yoga</h3><span>Yoga / Wellness Studio LP</span></div>
+    </a>
+    <a class="card" href="templates/japanese-craft.html">
+      <img class="thumb" src="assets/thumbs/japanese-craft.png" alt="Kotō">
+      <div class="card-body"><h3>Kotō</h3><span>Craft Brand LP</span></div>
+    </a>
+  </div>
+</main>
+
+<footer>© ievono — LP template demo gallery</footer>
+</body>
+</html>
